@@ -1,5 +1,5 @@
 import express from 'express';
-import monocleMiddleware from './middleware';
+import {monocleMiddleware} from 'monocle-middleware-express';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import path from 'path';
