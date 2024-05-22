@@ -1,5 +1,5 @@
 import express from 'express';
-import {monocleMiddleware} from 'monocle-middleware-express';
+import monocle from 'monocle-middleware-express';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import path from 'path';
@@ -17,7 +17,18 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '..', 'views'));
 
 // Monocle middleware to protect routes
-app.use(monocleMiddleware);
+const config = {
+    siteToken: process.env.SITE_TOKEN,
+    decryptionMethod: process.env.DECRYPTION_METHOD,
+    cookieSecret: process.env.COOKIE_SECRET,
+    privateKey: process.env.PRIVATE_KEY,
+    local: process.env.LOCAL,
+    verifyToken: process.env.VERIFY_TOKEN,
+    nodeEnv: process.env.NODE_ENV,
+};
+
+const monocleMiddleware = monocle.middleware(config);
+app.use(monocleMiddleware.guard);
 
 // Route to serve the index page
 app.get('/', (req, res) => {
