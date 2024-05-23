@@ -1,5 +1,5 @@
 # Use the official Node.js 16 image as base
-FROM node:16
+FROM node:21.6.0
 
 # Set the working directory in the Docker image
 WORKDIR /usr/src/app
