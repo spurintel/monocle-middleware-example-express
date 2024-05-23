@@ -27,7 +27,7 @@ const config = {
     nodeEnv: process.env.NODE_ENV,
 };
 
-const monocleMiddleware = monocle.middleware(config);
+const monocleMiddleware = monocle(config);
 app.use(monocleMiddleware.guard);
 
 // Route to serve the index page
