@@ -28,7 +28,7 @@ const config = {
 };
 
 const monocleMiddleware = monocle(config);
-app.use(monocleMiddleware.guard);
+app.use(monocleMiddleware);
 
 // Route to serve the index page
 app.get('/', (req, res) => {
