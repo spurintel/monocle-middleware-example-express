@@ -23,8 +23,9 @@
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "jose": "^5.3.0",
+    "monocle-middleware-express": "git+https://github.com/spurintel/monocle-middleware-express",
     "node-fetch": "^3.3.2",
-    "monocle-middleware-express": "git+https://github.com/spurintel/monocle-middleware-express"
+    "qs": "^6.16.0"
   },
   "devDependencies": {
     "@types/cookie": "^0.6.0",
