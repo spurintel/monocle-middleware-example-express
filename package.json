@@ -27,6 +27,9 @@
     "node-fetch": "^3.3.2",
     "qs": "^6.16.0"
   },
+  "overrides": {
+    "qs": "^6.16.0"
+  },
   "devDependencies": {
     "@types/cookie": "^0.6.0",
     "@types/cookie-parser": "^1.4.7",
